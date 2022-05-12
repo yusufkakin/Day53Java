@@ -11,6 +11,13 @@ public class TvShow {
         this.numEpisode = numEpisode;
     }
 
+        //OVERLOADING ASSIGNMENT
+    public TvShow(String showName){
+        this.showName = showName;
+        this.showGenre = "Thriller";
+        this.numEpisode = "It's a show";
+    }
+
     public String getNumEpisode() {
         return numEpisode;
     }

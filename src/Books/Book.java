@@ -7,6 +7,8 @@ public class Book {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Book> list = new ArrayList<>();
+        //OVERLOADING ASSIGNMENT
+        new Book("Game of Thrones", 200);
 
         while (true) {
             System.out.println("Enter the title of the book:");
@@ -46,4 +48,10 @@ public class Book {
         this.numPages = numPages;
         this.pubYear = pubYear;
     }
+    //OVERLOADING ASSIGNMENT
+    public Book(String title, int numPages) {
+        this.title = title;
+        this.numPages = 100;
+    }
 }
+

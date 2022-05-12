@@ -9,7 +9,9 @@ public class askAnimal {
 
     public static void main(String[] args) {
 
-        ArrayList<Animal> list = new ArrayList<Animal>();
+        ArrayList<Animal> list = new ArrayList<>();
+        //OVERLOADING ASSIGNMENT BELOW
+        new Animal(true);
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Animal.Animal Menu\nEntering nothing will stop the loop");

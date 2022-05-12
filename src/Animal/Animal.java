@@ -7,6 +7,10 @@ public class Animal {
         this.dogName = dogName;
         this.ifDog = ifDog;
     }
+        //OVERLOADING ASSIGNMENT BELOW
+    public Animal(boolean ifDog) {
+        this.ifDog = true;
+    }
 
     public String getDogName() {
         return dogName;

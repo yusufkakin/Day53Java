@@ -7,6 +7,9 @@ public class showLister {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<TvShow> list = new ArrayList<>();
+        //OVERLOADING ASSIGNMENT
+        new TvShow("Breaking Bad");
+
         while(true){
             System.out.println("Name of the show:");
             String showName = scanner.nextLine();
