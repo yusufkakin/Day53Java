@@ -92,11 +92,14 @@ public class BankAccount {
             case 4 -> {
                 System.out.println("Please enter the account number to transfer to");
                 int transferNumber = scanner.nextInt();
-                System.out.println("Please enter the amount to transfer");
-                double transferAmount = scanner.nextDouble();
-                transfer(accounts.get(transferNumber - 1), transferAmount);
-                System.out.println("The name on the account is: " + accounts.get(accountNumber).getHolderName() + " and they have a balance of $" + accounts.get(accountNumber).getAccountBalance());
-                System.out.println("The name on the account is: " + accounts.get(transferNumber).getHolderName() + " and they have a balance of $" + accounts.get(transferNumber).getAccountBalance());
+                if (transferNumber > accounts.size()) System.out.println("Account does not exist");
+                else {
+                    System.out.println("Please enter the amount to transfer");
+                    double transferAmount = scanner.nextDouble();
+                    transfer(accounts.get(transferNumber - 1), transferAmount);
+                    System.out.println("The name on the account is: " + accounts.get(accountNumber).getHolderName() + " and they have a balance of $" + accounts.get(accountNumber).getAccountBalance());
+                    System.out.println("The name on the account is: " + accounts.get(transferNumber).getHolderName() + " and they have a balance of $" + accounts.get(transferNumber).getAccountBalance());
+                }
             }
             case 5 -> System.out.println("Program exited");
         }
